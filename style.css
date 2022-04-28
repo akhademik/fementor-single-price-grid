@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+
+	/* TYPOGRAPHY  */
+	/* Font Size  */
+
+	/* try out this new responsive font calculator  */
+	--fs-auto-calc: calc(0.658vmin + 0.75rem);
+	/* end of font calculator */
+	--fs-d: var(--fs-auto-calc);
+	--fs-p: var(--fs-d);
+	--fs-header: calc(var(--fs-d) * 1.618);
+	--fs-header-1: calc(var(--fs-header) + 1rem);
+	font-size: var(--fs-p);
+
+	/* WEIGHT  */
+	--fw-200: 200;
+	--fw-400: 400;
+	--fw-700: 700;
+	--fw-900: 900;
+	font-family: 'Karla', sans-serif;
+
+	/* LINE HEIGHT  */
+	line-height: 168.8%;
+
+	/* END OF 'TYPO INIT'  */
+
+	/* COLORS  */
+	/* Color by hsl( a b c / opacity)  */
+	/* Primary*/
+	--clr-p-yellow: 71 73% 54%;
+	--clr-p-cyan: 179 62% 43%;
+
+	/* Gradient  */
+	--clr-p-grad1: 6 100% 80%;
+	--clr-p-grad2: 335 100% 65%;
+
+	/* Neutral  */
+	--clr-n-light-gray: 204 43% 93%;
+	--clr-n-gray-blue: 218 22% 67%;
+}
+
+body {
+	background-color: hsl(var(--clr-n-light-gray));
+	display: grid;
+	place-items: center;
+}
+.wrapper {
+	padding: 3rem 2rem;
+	display: grid;
+}
+.wrapper__card {
+	--wrp-bg-clr: white;
+	background-color: var(--wrp-bg-clr);
+	padding: 2rem;
+}
+.card__join {
+	color: hsl(var(--clr-n-gray-blue));
+}
+.wrapper__card--header {
+	font-size: 1.2rem;
+	color: white;
+	font-weight: 700;
+}
+.card__join .wrapper__card--header {
+	color: hsl(var(--clr-p-cyan));
+}
+.wrapper__card--sub-header {
+	color: hsl(var(--clr-p-yellow));
+	font-weight: var(--fw-700);
+	font-size: 1.1rem;
+	padding: 1rem 0;
+}
+.card__subs {
+	--wrp-bg-clr: #2bb3b1;
+	color: white;
+}
+.wrapper__card--price {
+	position: relative;
+	font-size: 2rem;
+	font-weight: var(--fw-700);
+}
+.wrapper__card--price::after {
+	content: 'per month';
+	display: inline-block;
+	position: absolute;
+	top: 24%;
+	font-size: 1rem;
+	color: hsl(var(--clr-n-light-gray) / 0.5);
+	padding-left: 1rem;
+	font-weight: var(--fw-200);
+}
+.wrapper__card--btn {
+	width: 100%;
+	border: 1px solid transparent;
+	background-color: hsl(var(--clr-p-yellow));
+	padding: 0.5rem 0;
+	color: white;
+	border-radius: 0.3rem;
+	font-weight: var(--fw-700);
+	box-shadow: 1px 2px 4px 3px hsl(0 0% 0% /0.26);
+	margin-top: 2rem;
+	cursor: pointer;
+}
+.card__whyus {
+	--wrp-bg-clr: #4abebd;
+}
+.card__whyus .wrapper__card--header {
+	padding-bottom: 1rem;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	color: hsl(var(--clr-n-light-gray) / 0.8);
+}
+
+@media (min-width: 40rem) {
+	.wrapper {
+		grid-template-columns: repeat(2, minmax(min-content, 325px));
+	}
+	.card__join {
+		grid-column: span 2;
+	}
+}

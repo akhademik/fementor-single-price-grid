@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Single Price Grid Component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Join our community
-
-  30-day, hassle-free money back guarantee
-
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
-
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Single Price Grid</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="wrapper__card card__join">
+				<p class="wrapper__card--header">Join our community</p>
+				<p class="wrapper__card--sub-header">30-day, hassle-free money back guarantee</p>
+				<p class="wrapper__card--content">
+					Gain access to our full library of tutorials along with expert code reviews.
+					Perfect for any developers who are serious about honing their skills.
+				</p>
+			</div>
+			<div class="wrapper__card card__subs">
+				<p class="wrapper__card--header">Monthly Subscription</p>
+				<p class="wrapper__card--price">$29</p>
+				<p class="wrapper__card--content">Full access for less than $1 a day</p>
+				<button class="wrapper__card--btn">Sign Up</button>
+			</div>
+			<div class="wrapper__card card__whyus">
+				<p class="wrapper__card--header">Why Us</p>
+				<ul>
+					<li>Tutorials by industry experts</li>
+					<li>Peer & expert code review</li>
+					<li>Coding exercises</li>
+					<li>Access to our Github repos</li>
+					<li>Community forum</li>
+					<li>Flashcard decks</li>
+					<li>New videos every week</li>
+				</ul>
+			</div>
+		</div>
+	</body>
 </html>
